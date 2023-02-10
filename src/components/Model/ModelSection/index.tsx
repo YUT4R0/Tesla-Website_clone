@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Container } from './styles';
+import useModel from '../useModel';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement>{
   modelName: string;
@@ -12,8 +13,22 @@ const ModelSection:React.FC<Props> = ( {
   children,
   ...props
 } ) => {
+
+  const { regModels } = useModel(modelName)
+
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(
+    () => {
+      if (sectionRef.current) {
+        regModels({ modelName, overlayNode, sectionRef })
+      }
+    },
+    [modelName, overlayNode, regModels]
+  )
+
   return (
-    <Container {...props} >
+    <Container ref={sectionRef} {...props} >
       {children}
     </Container>
   );

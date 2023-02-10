@@ -10,7 +10,7 @@ const DefaultOverlayContent: React.FC<CarProps> = ({ label, description }) => {
   return (
     <Container>
         <Heading>
-          <h1>{label}</h1>
+          <h1>{label}</h1> 
           <h2>{description}</h2>
         </Heading>
 
