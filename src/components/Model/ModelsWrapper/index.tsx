@@ -1,6 +1,7 @@
 import React, { useCallback, useRef, useState } from 'react';
-import { Container, OverlaysRoot, ModelOverlay } from './styles';
+import { Container, OverlaysRoot } from './styles';
 import ModelsContext, { CarModel } from '../ModelsContext';
+import ModelOverlay from '../ModelOverlay';
 
 interface Props {
   children: React.ReactNode;

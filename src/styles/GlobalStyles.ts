@@ -11,8 +11,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     *, input, button {
-        font-family: 'Roboto', sans-serif;
-        font-family: 'Roboto Mono', monospace;
+        font-family: 'Roboto', sans-serif, 'Roboto Mono', monospace;
     }
 `
 export default GlobalStyles
