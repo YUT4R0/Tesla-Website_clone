@@ -1,22 +1,24 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, Spacer } from './styles';
 import DefaultOverlayContent from '../DefaultOverlayContent';
 import { ModelSection, ModelsWrapper } from '../Model'
+import UniqueOverlay from '../UniqueOverlay';
 
 const Page: React.FC = () => {
   return (
     <Container>
         <ModelsWrapper>
 
-              {
+            <div>
+            {
                 [
-                  "Model 1",
-                  "Model 2",
-                  "Model 3",
-                  "Model 4",
-                  "Model 5",
-                  "Model 6",
-                  "Model 7",
+                  "Fiat Uno Sporting",
+                  "Peugeot 207 SW Escapade",
+                  "Chevrolet Prisman Joy",
+                  "Honda Civic LX G7",
+                  "Fiat Cronos Precision 1.8 AT6 ",
+                  "Citroen C4",
+                  "Audi A3 Turbo 20v",
                 ].map(model => (
                   <ModelSection
                   key={model}
@@ -31,7 +33,12 @@ const Page: React.FC = () => {
                   />
                 ))
               }
+            </div>
             
+              <Spacer />
+                
+              <UniqueOverlay />
+
         </ModelsWrapper>
     </Container>
   );

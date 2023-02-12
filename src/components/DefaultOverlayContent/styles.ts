@@ -5,11 +5,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  margin-bottom: 10vh;
 `;
 
 export const Heading = styled.div`
   margin-top: 12vh;
-
   text-align: center;
 
   > h1 {
@@ -71,8 +71,6 @@ export const Buttons = styled.div`
     @media (min-width: 38rem) {
         flex-direction: row;
         margin-bottom: 12vh;
-
-        
     }
 `
 
