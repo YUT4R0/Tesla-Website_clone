@@ -12,7 +12,7 @@ const useWrapperScroll = () => {
     useEffect(() => {
         const mutableWrapper = wrapperRef.current
 
-        if(mutableWrapper) {
+        if(wrapperRef.current) {
             const updateScrollValue = () => {
                 if (mutableWrapper) {
                     const { scrollTop, scrollHeight, offsetHeight } = mutableWrapper
